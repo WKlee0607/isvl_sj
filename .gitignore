@@ -1,0 +1,27 @@
+*.pth
+*.jpg
+*.tiff
+*.pyc
+*.xlsx
+*.gz
+
+# 恙썹븼?뉏뻑鸚?log/chekpoints
+log/foreground
+log/retrieval
+data/mvtec_test_vial_fruit
+mvtec_ad_2/
+mvtec_ad_2_aug/
+save_dir/
+result/
+results/anomaly_images
+results/anomaly_images_thresholded
+saved_results/
+submission_folder/
+pre_weights/
+find*.py
+compute_*.py
+test.py
+test_*.py
+train.py
+mvtec_ad_2_public_offline.py
+data/
