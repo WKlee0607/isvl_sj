@@ -30,21 +30,21 @@ export DINOV3_WEIGHTS="./pre_weights/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pt
 # 1. 데이터 전처리
 # -------------------------------------------------------
 echo "[1/6] Data preprocessing..."
-# python 1_image_splitter.py
+python 1_image_splitter.py
 
 # -------------------------------------------------------
 # 2. INP-Former 학습 (can, fabric, rice, sheet_metal, wallplugs, walnuts)
 # -------------------------------------------------------
 echo "[2/6] INP-Former training..."
-# python isvl.py --data_path "$DATA_PATH" --item_list can        --total_epochs "$TOTAL_EPOCHS"
-# python isvl.py --data_path "$DATA_PATH" --item_list fabric     --total_epochs "$TOTAL_EPOCHS"
-# python isvl.py --data_path "$DATA_PATH" --item_list rice       --total_epochs "$TOTAL_EPOCHS"
-# python isvl.py --data_path "$DATA_PATH" --item_list sheet_metal --total_epochs "$TOTAL_EPOCHS"
-# python isvl.py --data_path "$DATA_PATH" --item_list wallplugs  --total_epochs "$TOTAL_EPOCHS"
-# python isvl.py --data_path "$DATA_PATH" --item_list walnuts    --total_epochs "$TOTAL_EPOCHS"
+python isvl.py --data_path "$DATA_PATH" --item_list can        --total_epochs "$TOTAL_EPOCHS"
+python isvl.py --data_path "$DATA_PATH" --item_list fabric     --total_epochs "$TOTAL_EPOCHS"
+python isvl.py --data_path "$DATA_PATH" --item_list rice       --total_epochs "$TOTAL_EPOCHS"
+python isvl.py --data_path "$DATA_PATH" --item_list sheet_metal --total_epochs "$TOTAL_EPOCHS"
+python isvl.py --data_path "$DATA_PATH" --item_list wallplugs  --total_epochs "$TOTAL_EPOCHS"
+python isvl.py --data_path "$DATA_PATH" --item_list walnuts    --total_epochs "$TOTAL_EPOCHS"
 
-# python isvl.py --data_path "$DATA_PATH" --item_list fruit_jelly --total_epochs "$TOTAL_EPOCHS"
-# python isvl.py --data_path "$DATA_PATH" --item_list vial        --total_epochs "$TOTAL_EPOCHS"
+python isvl.py --data_path "$DATA_PATH" --item_list fruit_jelly --total_epochs "$TOTAL_EPOCHS"
+python isvl.py --data_path "$DATA_PATH" --item_list vial        --total_epochs "$TOTAL_EPOCHS"
 
 
 # -------------------------------------------------------
@@ -53,15 +53,15 @@ echo "[2/6] INP-Former training..."
 echo "[5/6] Inference..."
 
 # INP-Former inference
-# python isvl.py --data_path "$DATA_PATH" --item_list can         --total_epochs "$TOTAL_EPOCHS" --phase val --results_dir "$RESULTS_DIR"
-# python isvl.py --data_path "$DATA_PATH" --item_list fabric      --total_epochs "$TOTAL_EPOCHS" --phase val --results_dir "$RESULTS_DIR"
-# python isvl.py --data_path "$DATA_PATH" --item_list rice        --total_epochs "$TOTAL_EPOCHS" --phase val --results_dir "$RESULTS_DIR"
-# python isvl.py --data_path "$DATA_PATH" --item_list sheet_metal --total_epochs "$TOTAL_EPOCHS" --phase val --results_dir "$RESULTS_DIR"
-# python isvl.py --data_path "$DATA_PATH" --item_list wallplugs   --total_epochs "$TOTAL_EPOCHS" --phase val --results_dir "$RESULTS_DIR"
-# python isvl.py --data_path "$DATA_PATH" --item_list walnuts     --total_epochs "$TOTAL_EPOCHS" --phase val --results_dir "$RESULTS_DIR"
+python isvl.py --data_path "$DATA_PATH" --item_list can         --total_epochs "$TOTAL_EPOCHS" --phase val --results_dir "$RESULTS_DIR"
+python isvl.py --data_path "$DATA_PATH" --item_list fabric      --total_epochs "$TOTAL_EPOCHS" --phase val --results_dir "$RESULTS_DIR"
+python isvl.py --data_path "$DATA_PATH" --item_list rice        --total_epochs "$TOTAL_EPOCHS" --phase val --results_dir "$RESULTS_DIR"
+python isvl.py --data_path "$DATA_PATH" --item_list sheet_metal --total_epochs "$TOTAL_EPOCHS" --phase val --results_dir "$RESULTS_DIR"
+python isvl.py --data_path "$DATA_PATH" --item_list wallplugs   --total_epochs "$TOTAL_EPOCHS" --phase val --results_dir "$RESULTS_DIR"
+python isvl.py --data_path "$DATA_PATH" --item_list walnuts     --total_epochs "$TOTAL_EPOCHS" --phase val --results_dir "$RESULTS_DIR"
 
-# python isvl.py --data_path "$DATA_PATH" --item_list fruit_jelly --total_epochs "$TOTAL_EPOCHS" --phase val --results_dir "$RESULTS_DIR"
-# python isvl.py --data_path "$DATA_PATH" --item_list vial        --total_epochs "$TOTAL_EPOCHS" --phase val --results_dir "$RESULTS_DIR"
+python isvl.py --data_path "$DATA_PATH" --item_list fruit_jelly --total_epochs "$TOTAL_EPOCHS" --phase val --results_dir "$RESULTS_DIR"
+python isvl.py --data_path "$DATA_PATH" --item_list vial        --total_epochs "$TOTAL_EPOCHS" --phase val --results_dir "$RESULTS_DIR"
 
 
 
