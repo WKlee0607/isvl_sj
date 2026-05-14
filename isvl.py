@@ -366,7 +366,7 @@ def main(args):
         model.load_state_dict(torch.load(os.path.join(args.save_dir, args.save_name, 'model.pth')), strict=True)
         model.eval()
         gaussian_kernel = get_gaussian_kernel(kernel_size=5, sigma=4).to(device)
-        save_dir = './results/anomaly_images'
+        save_dir = os.path.join(args.results_dir, 'anomaly_images')
         os.makedirs(save_dir, exist_ok=True)  # 创建根目录
 
         for item, val_data in zip(args.item_list, val_data_list):
@@ -452,7 +452,7 @@ def main(args):
         model.load_state_dict(torch.load(os.path.join(args.save_dir, args.save_name, 'model.pth')), strict=True)
         model.eval()
         gaussian_kernel = get_gaussian_kernel(kernel_size=5, sigma=4).to(device)
-        save_dir = './results/anomaly_images_public'
+        save_dir = os.path.join(args.results_dir, 'anomaly_images_public')
         os.makedirs(save_dir, exist_ok=True)
 
         for item, test_data in zip(args.item_list, test_data_list):
@@ -500,6 +500,7 @@ if __name__ == '__main__':
     print("Save directory:", './saved_results_new_base_test_epoch15')
     parser.add_argument('--save_dir', type=str, default='./saved_results_new_base_test_epoch15') 
     parser.add_argument('--save_name', type=str, default='INP-Former-Multi-Class')
+    parser.add_argument('--results_dir', type=str, default='./results')
 
     # model info
     parser.add_argument('--encoder', type=str, default='dinov3_vitl16') # ViT-L/16 distilled, LVD-1689M

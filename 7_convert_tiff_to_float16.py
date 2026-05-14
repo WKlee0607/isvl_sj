@@ -1,3 +1,4 @@
+import argparse
 import numpy as np
 from PIL import Image
 import tifffile
@@ -48,6 +49,13 @@ def convert_images_to_float16_tiff(root_dir: str):
 
 # 使用方法
 if __name__ == "__main__":
-    directory = "./results/anomaly_images"
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "results_root",
+        nargs="?",
+        default="./results",
+        help="Root results directory containing anomaly_images.",
+    )
+    args = parser.parse_args()
+    directory = Path(args.results_root) / "anomaly_images"
     convert_images_to_float16_tiff(directory)
-

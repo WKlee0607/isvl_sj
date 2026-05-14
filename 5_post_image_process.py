@@ -1,3 +1,4 @@
+import argparse
 import os
 
 import cv2
@@ -5,7 +6,6 @@ import numpy as np
 from tqdm import tqdm
 
 
-INPUT_ROOT = './results/anomaly_images_thresholded'
 IMAGE_EXTS = ('.png', '.jpg', '.jpeg', '.bmp', '.tif', '.tiff')
 MIN_COMPONENT_AREA_RATIO = 0.00002
 MIN_COMPONENT_AREA_PIXELS = 8
@@ -26,7 +26,7 @@ def remove_tiny_components(binary_img):
     return cleaned
 
 
-def process_thresholded_images(root_dir=INPUT_ROOT):
+def process_thresholded_images(root_dir):
     if not os.path.isdir(root_dir):
         print(f'Skipping post-processing: missing directory {root_dir}')
         return
@@ -51,4 +51,12 @@ def process_thresholded_images(root_dir=INPUT_ROOT):
 
 
 if __name__ == '__main__':
-    process_thresholded_images()
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        'results_root',
+        nargs='?',
+        default='./results',
+        help='Root results directory containing anomaly_images_thresholded.',
+    )
+    args = parser.parse_args()
+    process_thresholded_images(os.path.join(args.results_root, 'anomaly_images_thresholded'))

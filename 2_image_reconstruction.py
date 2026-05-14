@@ -1,3 +1,4 @@
+import argparse
 import os
 import re
 from collections import defaultdict
@@ -144,7 +145,7 @@ def reconstruct_images_recursive(input_dir, output_dir):
     print(f"Reconstruction finished: {input_dir} -> {output_dir}")
 
 
-if __name__ == "__main__":
+def main(results_root):
     categories = [
         "can",
         "fabric",
@@ -157,11 +158,23 @@ if __name__ == "__main__":
     ]
 
     for category in categories:
-        input_images = f"./results/anomaly_images/{category}"
-        output_images = f"./results/anomaly_images/{category}_merge"
+        input_images = os.path.join(results_root, "anomaly_images", category)
+        output_images = os.path.join(results_root, "anomaly_images", f"{category}_merge")
 
         if not os.path.isdir(input_images):
             print(f"Skipping {category}: missing input directory {input_images}")
             continue
 
         reconstruct_images_recursive(input_images, output_images)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "results_root",
+        nargs="?",
+        default="./results",
+        help="Root results directory containing anomaly_images.",
+    )
+    args = parser.parse_args()
+    main(args.results_root)

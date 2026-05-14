@@ -87,6 +87,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "submission_path",
+        nargs="?",
+        default="./results",
         type=str,
         help=(
             "Path to your submission directory containing all MVTec AD 2 "

@@ -1,8 +1,8 @@
+import argparse
 import os
 import shutil
 
 
-ROOT_DIR = './results/anomaly_images'
 CATEGORIES = [
     'can',
     'fabric',
@@ -15,7 +15,7 @@ CATEGORIES = [
 ]
 
 
-def replace_with_merged_outputs(root_dir=ROOT_DIR, categories=CATEGORIES):
+def replace_with_merged_outputs(root_dir, categories=CATEGORIES):
     for category in categories:
         original_path = os.path.join(root_dir, category)
         merged_path = os.path.join(root_dir, f'{category}_merge')
@@ -33,4 +33,12 @@ def replace_with_merged_outputs(root_dir=ROOT_DIR, categories=CATEGORIES):
 
 
 if __name__ == '__main__':
-    replace_with_merged_outputs()
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        'results_root',
+        nargs='?',
+        default='./results',
+        help='Root results directory containing anomaly_images.',
+    )
+    args = parser.parse_args()
+    replace_with_merged_outputs(os.path.join(args.results_root, 'anomaly_images'))
