@@ -208,8 +208,9 @@ python compute_validation_thresholds.py \
   --output "./validation_thresholds.json"
 ```
 
-The resulting thresholds are written to `validation_thresholds.json` and copied
-into `4_threshold_mapv2.py` before running the final postprocessing step.
+The resulting thresholds are written to `validation_thresholds.json`. The final
+threshold values used for submission were then entered into `4_threshold_mapv2.py`
+before running the final postprocessing step.
 
 This threshold procedure does not use `test_public`, `test_private`, or
 `test_private_mixed` data for threshold optimization.
@@ -316,3 +317,18 @@ DINOv3: TODO: add repository link here
 
 Please cite and follow the licenses of the original projects and pretrained
 weights.
+
+## License
+
+This code is intended for non-commercial research use for the VAND Industrial
+Track.
+
+License:
+
+```text
+CC BY-NC 4.0
+```
+
+The pretrained DINOv3 backbone, INP-Former code, ISVL code, and MVTec AD 2
+dataset are governed by their respective licenses. Please review those licenses
+before redistribution or reuse.
