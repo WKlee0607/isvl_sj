@@ -6,7 +6,7 @@ Create a new conda environment and install required packages.
 
 ```bash
 # Create a new conda environment
-conda create -n cvprw python=3.8.12
+conda create -n cvprw python=3.10
 
 # Activate the environment
 conda activate cvprw
