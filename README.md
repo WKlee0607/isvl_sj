@@ -269,7 +269,7 @@ directory by `8_check_and_prepare_data_for_upload.py`.
 ```bash
 DATA_PATH="./mvtec_ad_2_aug"
 RESULTS_DIR="./results"
-TOTAL_EPOCHS=15
+TOTAL_EPOCHS=10
 ```
 
 5. Run:
@@ -312,7 +312,7 @@ This project builds on ideas and code from:
 ```text
 INP-Former: https://github.com/luow23/INP-Former
 ISVL: https://github.com/ISVL119/isvl
-DINOv3: TODO: add repository link here
+DINOv3: https://github.com/facebookresearch/dinov3
 ```
 
 Please cite and follow the licenses of the original projects and pretrained
@@ -323,12 +323,9 @@ weights.
 This code is intended for non-commercial research use for the VAND Industrial
 Track.
 
-License:
+Our challenge-specific modifications and pipeline code are released under
+CC BY-NC 4.0 where permitted.
 
-```text
-CC BY-NC 4.0
-```
-
-The pretrained DINOv3 backbone, INP-Former code, ISVL code, and MVTec AD 2
-dataset are governed by their respective licenses. Please review those licenses
-before redistribution or reuse.
+The pretrained DINOv3 backbone, INP-Former code, ISVL code, VAND/MVTec
+submission utilities, and MVTec AD 2 dataset are governed by their respective
+licenses. Please review those licenses before redistribution or reuse.
