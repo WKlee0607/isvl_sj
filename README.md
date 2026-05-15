@@ -120,7 +120,7 @@ Main training settings in `run_vand.sh`:
 
 ```bash
 DATA_PATH="./mvtec_ad_2_aug"
-TOTAL_EPOCHS=15
+TOTAL_EPOCHS=10
 RESULTS_DIR="./results"
 ```
 
