@@ -50,10 +50,10 @@ Download the pretrained weight and place it at:
 ./pre_weights/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth
 ```
 
-Weight URL:
+Pretrained Weight URL:
 
 ```text
-TODO: add public pretrained weight link here
+https://drive.google.com/file/d/1mBYLvNc4sktJodrzwkjx7kUjOr9zH8jF/view?usp=drive_link
 ```
 
 DINOv3 repository URL:
