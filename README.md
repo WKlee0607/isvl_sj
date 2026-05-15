@@ -59,7 +59,7 @@ TODO: add public pretrained weight link here
 DINOv3 repository URL:
 
 ```text
-TODO: add DINOv3 repository link here
+https://github.com/facebookresearch/dinov3
 ```
 
 Please also check and follow the license terms of the pretrained backbone and
@@ -121,7 +121,7 @@ Main training settings in `run_vand.sh`:
 ```bash
 DATA_PATH="./mvtec_ad_2_aug"
 TOTAL_EPOCHS=15
-RESULTS_DIR="./results_epoch15"
+RESULTS_DIR="./results"
 ```
 
 Each category is trained with the same architecture and hyperparameters. The
@@ -130,7 +130,7 @@ category name only selects the corresponding normal training data directory.
 Checkpoints are saved under `--save_dir`. The current default in `isvl.py` is:
 
 ```text
-./saved_results_new_base_test_epoch15
+./saved_results
 ```
 
 Make sure `--save_dir` and `TOTAL_EPOCHS` are consistent with the checkpoint
@@ -202,7 +202,7 @@ Example command:
 ```bash
 python compute_validation_thresholds.py \
   --data_path "./mvtec_ad_2_aug" \
-  --save_dir "./saved_results_new_base_test_epoch15" \
+  --save_dir "./saved_results" \
   --k 3.0 \
   --threshold_scope global \
   --output "./validation_thresholds.json"
@@ -268,7 +268,7 @@ directory by `8_check_and_prepare_data_for_upload.py`.
 
 ```bash
 DATA_PATH="./mvtec_ad_2_aug"
-RESULTS_DIR="./results_epoch15"
+RESULTS_DIR="./results"
 TOTAL_EPOCHS=15
 ```
 

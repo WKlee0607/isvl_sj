@@ -21,8 +21,8 @@ echo "=========================================="
 # -------------------------------------------------------
 mkdir -p logs
 DATA_PATH="./mvtec_ad_2_aug"
-RESULTS_DIR="./results_epoch20" #"./results_epoch15" #"./results"
-TOTAL_EPOCHS=20
+RESULTS_DIR="./results" 
+TOTAL_EPOCHS=10
 export DINOV3_REPO="${DINOV3_REPO:-./dinov3}"
 export DINOV3_WEIGHTS="./pre_weights/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth"
 

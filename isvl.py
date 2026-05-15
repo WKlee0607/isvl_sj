@@ -497,8 +497,7 @@ if __name__ == '__main__':
     # save info
     # epoch 20: ./saved_results_new_base_test
     # epoch 15: ./saved_results_new_base_test_epoch15
-    print("Save directory:", './saved_results_new_base_test_epoch15')
-    parser.add_argument('--save_dir', type=str, default='./saved_results_new_base_test_epoch15') 
+    parser.add_argument('--save_dir', type=str, default='./saved_results') 
     parser.add_argument('--save_name', type=str, default='INP-Former-Multi-Class')
     parser.add_argument('--results_dir', type=str, default='./results')
 
