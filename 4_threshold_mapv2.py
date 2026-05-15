@@ -44,51 +44,90 @@ import tifffile
 # Epoch 10
 # thresholds = {
 #     "can": {
-#         "test_private": 42, #55, 
-#         "test_private_mixed": 42, #55 
+#         "test_private": 42,  
+#         "test_private_mixed": 42, 
 #     },
 #     "fabric": {
-#         "test_private": 18, #69,
-#         "test_private_mixed": 18 #69,
+#         "test_private": 18, 
+#         "test_private_mixed": 18 
 #     },
 #     "fruit_jelly": { # 95로바꿔
-#         "test_private": 30, #86,
-#         "test_private_mixed": 30 #86
+#         "test_private": 30, 
+#         "test_private_mixed": 30 
 #     },
 #     "rice": {
-#         "test_private": 22, #54,
-#         "test_private_mixed": 22 #54
+#         "test_private": 22, 
+#         "test_private_mixed": 22 
 #     },
 #     "sheet_metal": {
-#         "test_private": 25,#63,
-#         "test_private_mixed": 25 #65
+#         "test_private": 25,
+#         "test_private_mixed": 25 
 #     },
 #     "vial": { # 95로바꿔
-#         "test_private": 28, #79,
-#         "test_private_mixed": 28 #79
+#         "test_private": 28, 
+#         "test_private_mixed": 28 
 #     },
 #     "wallplugs": {
-#         "test_private": 33, #99,
-#         "test_private_mixed": 33 #108
+#         "test_private": 33, 
+#         "test_private_mixed": 33 
 #     },
 #     "walnuts": {
-#         "test_private": 25, #67,
+#         "test_private": 25, 
 #         "test_private_mixed": 25
 #     }
 # }
 
 
-# Epoch 15 -> 20도 그냥 이걸로 ㄱ
+# Epoch 10 test
 thresholds = {
-    "can": {"test_private": 39, "test_private_mixed": 39},
-    "fabric": {"test_private": 17, "test_private_mixed": 17},
-    "fruit_jelly": {"test_private": 24, "test_private_mixed": 24},
-    "rice": {"test_private": 18, "test_private_mixed": 18},
-    "sheet_metal": {"test_private": 22, "test_private_mixed": 22},
-    "vial": {"test_private": 25, "test_private_mixed": 25},
-    "wallplugs": {"test_private": 30, "test_private_mixed": 30},
-    "walnuts": {"test_private": 19, "test_private_mixed": 19},
+    "can": {
+        "test_private": 42,  
+        "test_private_mixed": 52, #47, #42, 
+    },
+    "fabric": {
+        "test_private": 13, #23, #18, 
+        "test_private_mixed":13, #23 #18 
+    },
+    "fruit_jelly": { # 95로바꿔
+        "test_private": 38, #35, #30, 
+        "test_private_mixed": 38, #35, #30 
+    },
+    "rice": {
+        "test_private": 22, 
+        "test_private_mixed": 22 
+    },
+    "sheet_metal": {
+        "test_private": 25,
+        "test_private_mixed": 25 
+    },
+    "vial": { # 95로바꿔
+        "test_private": 28, 
+        "test_private_mixed": 28 
+    },
+    "wallplugs": {
+        "test_private": 33, 
+        "test_private_mixed": 33 
+    },
+    "walnuts": {
+        "test_private": 25, 
+        "test_private_mixed": 25
+    }
 }
+
+
+
+
+# Epoch 15 -> 20도 그냥 이걸로 ㄱ
+# thresholds = {
+#     "can": {"test_private": 39, "test_private_mixed": 39},
+#     "fabric": {"test_private": 17, "test_private_mixed": 17},
+#     "fruit_jelly": {"test_private": 24, "test_private_mixed": 24},
+#     "rice": {"test_private": 18, "test_private_mixed": 18},
+#     "sheet_metal": {"test_private": 22, "test_private_mixed": 22},
+#     "vial": {"test_private": 25, "test_private_mixed": 25},
+#     "wallplugs": {"test_private": 30, "test_private_mixed": 30},
+#     "walnuts": {"test_private": 19, "test_private_mixed": 19},
+# }
 
 
 
